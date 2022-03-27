@@ -183,15 +183,4 @@ desktop size*/
     max-width: 120vw;
     max-height: 80vh;
 }
-.lum-lightbox-inner .lum-lightbox-caption {
-  margin: 0 auto;
-  color: #fff;
-  max-width: 700px;
-  text-align: center;
-}
-.lum-lightbox-caption {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-}
 }
