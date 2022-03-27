@@ -183,4 +183,9 @@ desktop size*/
     max-width: 120vw;
     max-height: 80vh;
 }
+.lum-lightbox-caption {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
 }
