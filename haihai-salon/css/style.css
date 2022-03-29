@@ -156,6 +156,35 @@ header a {
   color: var(--white);
 }
 
+/*thanks*/
+#thanks {
+  height: 100vh;
+  background: var(--white);
+  text-align: center;
+}
+#thanks p {
+  text-align: center;
+  color: var(--greye);
+  margin-top: 50px;
+  padding: 0 6px;
+}
+.to-top-btn {
+  color: var(--white);
+  font-size: 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  background: #607D8B;
+  position: relative;
+  display: inline-block;
+  top: -2px;
+  padding: 10px 20px;
+}
+.to-top-btn:hover {
+  color: #607D8B;
+  background: var(--white);
+  border: solid 3px #607D8B;
+}
+
 @media (min-width: 768px) {
 
  /*header*/
@@ -214,11 +243,6 @@ font-size: 1.6rem;
   }
   p {
   font-size: 1.1rem;
-  }
-
-  /*about*/
-  #about img {
-    height: 38vh;
   }
 
   /*news*/
