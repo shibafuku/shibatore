@@ -130,7 +130,7 @@ header a {
   border-image: linear-gradient(var(--light-blue),var(--blue));
   border-image-slice: 1;
 }
-iframe {
+.map {
   width: 100%;
 }
 
