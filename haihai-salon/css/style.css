@@ -144,8 +144,8 @@ header a {
 #contact h2 {
   color: var(--white);
 }
-.title multi-line {
-  font-size: 1rem;
+#sf-form-page h2 {
+  font-size: 12px;
 }
 
 
