@@ -50,7 +50,6 @@ header,h1,h2,.hero-date {
 }
 .area {
   scroll-snap-align: start;
-  height: 100vh;
 }
 
 /*layouta*/
