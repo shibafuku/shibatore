@@ -144,6 +144,10 @@ header a {
 #contact h2 {
   color: var(--white);
 }
+.title multi-line {
+  font-size: 1rem;
+}
+
 
 /*footer*/
 .footer {
