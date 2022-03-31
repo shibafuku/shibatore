@@ -1,0 +1,370 @@
+@charset 'utf-8';
+
+/*-----------header-------------*/
+header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.main-nav {
+  display: flex;
+}
+.main-nav li {
+  text-align: center;
+  font-size: .75rem;
+}
+.logo {
+  width: 60%;
+}
+.main-nav a {
+  display: block;
+  padding: .5rem;
+  width: 4rem;
+}
+.main-nav a::before {
+  display: block;
+  margin-bottom: .25rem;
+  /*Font Awesome*/
+  font-family: 'Font Awesome 5 Pro';
+  font-weight: 900;
+  color: #555;
+  font-size: 1.25rem;
+}
+.menu-home::before {
+  content: '\f015';
+}
+.menu-job::before {
+  content: '\f0ca';
+}
+.menu-form::before {
+  content: '\f56e';
+}
+.main-nav .current {
+  background: #f8f6f2;
+}
+
+/*--------------home--------------*/
+.home-hero {
+  background: url('../images/top.png') no-repeat right top / 70vw auto;
+  padding: 5.5rem 1rem 3rem;
+}
+
+.home-hero h2 {
+  font-family: 'Sawarabi Mincho', sans-serif;
+  font-size: 1.5rem;
+  margin: 8vw 0 12vw;
+  background: rgba(255,255,255,.8);
+  padding: 1rem;
+  display: inline-block;
+}
+.home-hero p {
+  font-size: 1.125rem;
+}
+
+/*contents*/
+.brown-bg {
+  background: #f8f6f2;
+}
+.content {
+  padding: 4rem 1rem;
+}
+.studio-img {
+  width: 90vw;
+}
+.home-chart {
+  margin-left: 2vw;
+}
+.flex-reverse .home-chart {
+  margin: 0 2vw 0 0;
+}
+.home-chart img {
+  width: 90vw;
+}
+.home-chart p {
+  text-align: center;
+}
+/*グラフの文字*/
+.ct-label {
+  font-size: 1rem;
+  fill: #fff;
+}
+
+/*円グラフ*/
+.ct-series-a .ct-slice-pie {
+  fill: #2d3374;
+}
+.ct-series-b .ct-slice-pie {
+  fill: #3a7edf;
+}
+.ct-series-c .ct-slice-pie {
+  fill: #9bcbf8;
+}
+.ct-series-d .ct-slice-pie {
+  fill: #bbb;
+}
+
+/*棒グラフ*/
+.ct-series-a .ct-bar {
+  stroke: #3a7edf;
+}
+.ct-bar {
+  stroke-width: 16%;
+}
+.fadeLeft{
+  animation-name:fadeLeftAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  }
+  
+  @keyframes fadeLeftAnime{
+    from {
+      opacity: 0;
+    transform: translateX(-100px);
+    }
+  
+    to {
+      opacity: 1;
+    transform: translateX(0);
+    }
+  }
+  .fadeRight{
+    animation-name:fadeRightAnime;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+    opacity:0;
+    }
+    
+    @keyframes fadeRightAnime{
+      from {
+        opacity: 0;
+      transform: translateX(100px);
+      }
+    
+      to {
+        opacity: 1;
+      transform: translateX(0);
+      }
+    }
+
+
+/*--------------job.html--------------*/
+.page-job {
+  background-image: url('../images/bg-job.jpg'), linear-gradient(1800deg,transparent 0%,transparent 50%, #F8F6F2 100%); /*意味わからん*/
+  background-position: left 106px, 0 0;
+  background-size: 70vw auto, contain;
+  background-repeat: no-repeat;
+}
+.page-job .btn {
+  margin-bottom: 4rem;
+}
+
+/*table*/
+table {
+  margin: 3.5rem 0;
+  width: 100%;
+}
+th,
+td {
+  display: block;
+}
+th {
+  font-weight: normal;
+  background: #f8f6f2;
+  padding: 1rem;
+}
+td {
+  padding: .75rem 1rem 1.75rem;
+}
+/*timeline*/
+.timeline {
+  list-style: decimal inside;
+  font-family: 'Sawarabi Mincho', sans-serif;
+}
+.timeline-title {
+  font-size: 1.375rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+.timeline-content {
+  font-family: sans-serif;
+}
+
+/*--------------footer--------------*/
+footer {
+  background: #2d3374;
+  color: rgba(255,255,255,.8);
+  padding: 3.5rem 1rem;
+  text-align: center;
+}
+footer .btn {
+  margin-bottom: 3.5rem;
+}
+.footer-nav li {
+  margin: 1rem 0;
+}
+
+
+@media (min-width: 768px) {
+  /*----------header----------*/
+  header .wrapper {
+    padding: 2rem 1rem;
+  }
+  .logo {
+    width: 65%;
+  }
+  .main-nav li {
+    margin-left: 2rem;
+    font-family: 'Sawarabi Mincho', sans-serif;
+    font-size: 1.25rem;
+  }
+  .main-nav a {
+    width: auto;
+  }
+  .main-nav a:hover,
+  .main-nav .current {
+    border-bottom: 2px solid #2d3374;
+    padding-bottom: .5rem;
+    background: none;
+  }
+  .main-nav a::before {
+    content: '';
+  }
+
+  /*----------home----------*/
+  
+  .home-hero h2 {
+    font-size: 2.5rem;
+    margin: 0 0 2rem;
+    padding: 0;
+    position: absolute;
+    top: 9.75rem;
+  }
+  .home-hero p {
+    width: 38vw;
+    background: rgba(255,255,255,.8);
+    padding: 1rem;
+    padding: 0;
+    margin-bottom: 2.5rem;
+  }
+
+  /*contents*/
+ .content {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 4rem 1rem;
+ }
+ .flex-reverse {
+   flex-direction: row-reverse;
+ }
+ .home-text {
+   width: 50vw;
+   margin-bottom: 0;
+ }
+ .home-chart {
+   width: 34vw;
+ }
+ .studio-img {
+   width: 42vw;
+   margin-right: 3rem;
+ }
+
+ /*----------footer----------*/
+.footer-nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/*--------------job.html--------------*/
+tr:nth-child(odd) {
+  background: #f8f6f2;
+}
+tr:nth-child(even) th {
+  background: #fff;
+}
+th,
+td {
+  padding: 1.25rem;
+  display: table-cell;
+}
+th {
+  width: 24%;
+  vertical-align: middle;
+}
+td {
+  width: 76%;
+}
+
+/*timeline*/
+.timeline-item {
+  display: flex;
+  margin-bottom: 0;
+}
+.timeline-title {
+  width: 24%;
+  padding: 2rem 2.5rem 2rem 0;
+  text-align: right;
+}
+.timeline-content {
+  border-left: 5px solid #f8f6f2;
+  width: 76%;
+  padding: 1.5rem 0 1.5rem 2.5rem;
+  position: relative;
+}
+.timeline-content::before {
+  display: block;
+  width: 2.25rem;
+  height: 2.25rem;
+  background: #d0bea2;
+  text-align: center;
+  padding: .1rem;
+  position: absolute;
+  top: 1.5rem;
+  left: -1.5rem;
+  /*font awesome*/
+  font-family: 'Font Awesome 5 Pro';
+  font-weight: 900;
+  color: #fff;
+  font-size: 1.25rem;
+}
+.icon-file::before{
+  content: '\f56e';
+}
+.icon-code::before{
+  content: '\f121';
+}
+.icon-chat::before{
+  content: '\f086';
+}
+.icon-hands::before{
+  content: '\f2b5';
+}
+
+}
+@media (min-width: 1024px) {
+  /*----------home----------*/
+.home-hero {
+  padding: 16vw 1rem;
+}
+.home-hero h2 {
+  position: absolute;
+  top: 13rem;
+}
+
+}
+@media (min-width: 1280px) {
+  /*----------home----------*/
+.home-hero {
+  padding: 20vw 1rem;
+}
+.home-hero h2 {
+  position: absolute;
+  top: 20rem;
+}
+/*contents*/
+.studio-img {
+  width: 37vw;
+}
+}
