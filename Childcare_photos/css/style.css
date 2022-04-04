@@ -97,7 +97,7 @@ grid*/
   margin: 0 auto 3vw;
   gap: 2vw;
   grid-template-columns: repeat(2,46vw);
-  grid-template-rows: repeat(12,46vw);
+  grid-template-rows: repeat(13,46vw);
 }
 .grid-item {
   width: 100%;
@@ -118,9 +118,10 @@ grid*/
   grid-column: 1/3;
   grid-row: 8/9;
 }
-.kaiten {
-  transform: rotate(90deg)
-  }
+.grid-big-last {
+  grid-column: 1/3;
+  grid-row: 12/13;
+}
 
 /*
 footer*/
@@ -155,7 +156,7 @@ desktop size*/
     width: 80vw;
     gap: 1vw;
     grid-template-columns: repeat(3,26vw);
-    grid-template-rows: repeat(8,26vw);
+    grid-template-rows: repeat(9,26vw);
   }
   .grid-big-middle {
     grid-column: 2/4;
@@ -164,6 +165,14 @@ desktop size*/
   .grid-big-bottom {
     grid-column: 1/3;
     grid-row: 6/7;
+  }
+  .grid-big-last {
+    grid-column: 2/4;
+    grid-row: 8/9;
+  }
+  .grid-big-pc {
+    grid-column: 2/4;
+    grid-row: 9/10;
   }
   .grid-item {
     transition: .3s;
