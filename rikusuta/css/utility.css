@@ -1,0 +1,65 @@
+@charset 'utf-8';
+
+html {
+  font-size: 100%;
+}
+
+body {
+  width: auto;
+  color: #080808;
+}
+section {
+  margin: 0 205px;
+}
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+h2 {
+  font-size: 2.25rem;
+  text-align: center;
+}
+h3 {
+  display: inline-block;
+  font-size: 1.5rem;
+  line-height: 2;
+  text-align: left;
+}
+p, 
+footer-copy {
+  font-size: .875rem;
+}
+p {
+  line-height: 2;
+}
+.mb100 {
+  margin-bottom: 100px;
+}
+.mb150 {
+  margin-bottom: 150px;
+}
+.mb152 {
+  margin-bottom: 152px;
+}
+.mb22 {
+  margin-bottom: 22px;
+}
+.mb42 {
+  margin-bottom: 42px;
+}
+.mb50 {
+  margin-bottom: 50px;
+}
+.mb70 {
+  margin-bottom: 70px;
+}
+.mb72 {
+  margin-bottom: 72px;
+}
+.mr70 {
+  margin-right: 70px;
+}
+.ml70 {
+  margin-left: 70px;
+}
