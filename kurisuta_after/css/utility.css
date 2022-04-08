@@ -1,0 +1,40 @@
+@charset 'utf-8';
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif,'Noto Sans JP', sans-serif;
+}
+
+/*colors*/
+:root {
+  --white:#FFFFFF;
+  --text_black:#141414;
+  --part_black:#1B1310;
+}
+
+/*basestyling*/
+.section-wrapper {
+  padding: 100px 10% 50px;
+}
+.section-title {
+  font-size: 3.6rem;
+  margin-bottom: 70px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+.section-subtitle {
+  font-size: 2.4rem;
+  margin-bottom: 42px;
+  font-weight: bold;
+  line-height: 2;
+  letter-spacing: 0.1em;
+}
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
