@@ -239,12 +239,11 @@ small {
     margin: 50px auto;
   }
   .content-service-text {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
   .service-img {
     height: 150px;
     object-fit: cover;
-    margin-bottom: 50px;
   }
   /*news*/
   .news-card {
