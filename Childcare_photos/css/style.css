@@ -189,7 +189,7 @@ desktop size*/
 /*スマホでライトボックス見た時の調整*/
 @media (max-width: 460px){
 .lum-lightbox-inner img {
-    max-width: 120vw;
+    max-width: 95vw;
     max-height: 80vh;
 }
 }
