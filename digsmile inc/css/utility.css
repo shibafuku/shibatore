@@ -1,0 +1,88 @@
+/*----------------------*/
+/*---------base---------*/
+/*----------------------*/
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
+  color: #333;
+}
+img,svg {
+  width: 100%; /*ここでwidth100%にしておき、divで囲っているクラスにmax-widtを指定すれば画面幅に合わせて画像が縮小する*/
+  vertical-align: bottom;/*画像の下を合わせるため。これないと浮くらしい*/
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+a:hover {
+  opacity: .7;
+  transition: .3s;
+}
+button{/*buttonタグへのリセット*/
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+}
+
+/*----------------------*/
+/*---------styling------*/
+/*----------------------*/
+.section-wrapper {
+  padding: 60px 0;
+}
+
+.flex-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content-wrapper {
+  max-width: 1100px;
+  padding: 0 30px; /*画面を縮小しても両サイドに30pxの余白が残るように設定*/
+  margin: 0 auto; /*中央寄せ*/
+}
+.section-title {
+  font-size: 3.2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.link-btn {
+  color: #fff;
+  background-color: #000000;
+  display: block;
+  width: 160px;
+  line-height: 36px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 30px;
+}
+.gray-bg {
+  background-color: #F2F2F2;
+}
+.lines {
+  line-height: 2;
+}
+
+@media screen and (max-width: 768px){
+  /* ----------------------- */
+  /* base_sp
+  /* ----------------------- */
+  body {
+    font-size: 1.4rem;
+  }
+  .section-wrapper {
+    padding: 40px 0;
+  }
+  .content-wrapper{
+    padding: 0 4vw;
+  }
+
+}

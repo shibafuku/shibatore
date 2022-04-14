@@ -1,0 +1,340 @@
+/*----------------------*/
+/*--------header--------*/
+/*----------------------*/
+.site-title {
+  width: 260px;
+  position: fixed;/*上部に固定*/
+  top: 38px;
+  left: 4vw;
+  z-index: 1;
+}
+.site-title.black svg path {/*jqeryの表記。fv以下にスクロールした際に白文字が黒文字に変わる*/
+  fill: #333;
+  transition: fill .3s;/*0.3秒かけて変化する*/
+}
+.header-nav {
+  font-weight: bold;
+  font-size: 2rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 36.1vw;/*520px/1440px*100*/
+  text-align: center;
+  padding: 120px 0 0;/*なんで120px*/
+  background-color: rgba(34,34,34,.95);
+  z-index: 2;
+  /*横に隠す記載。jqeryでこの辺動かす*/
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform .3s,opacity .3s;
+}
+.nav-item {
+  margin-bottom: 30px;
+}
+.nav-item:first-of-type {
+  margin-bottom: 40px;
+}
+.nav-item:last-of-type {
+  margin-bottom: 0;
+}
+.header-nav a {
+  color: #fff;
+}
+/* ハンバーガーボタン（メニューが開いていないとき） */
+.burger-btn{
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 38px;
+  right: 4vw;
+  z-index: 3;
+}
+.bar{
+  display: block;
+  background-color: #fff;
+  height: 2px;
+  width: 22px;
+  border-radius: 1px;
+}
+.bar_top{
+  transform: translateY(-4px);
+  transition: transform .3s;
+}
+.bar_bottom{
+  transform: translateY(4px);
+  transition: transform .3s;
+}
+
+.menu{
+  display: block;
+  font-size: 1rem;
+  text-transform: uppercase;/*初めからhtmlで全て大文字表記だと文字として認識されないので、小文字表記でcssにて大文字にする指定*/
+  color: #fff;
+  font-weight: bold;
+  margin-left: 5px;
+}
+/* ハンバーガーボタン（メニューが開いたとき）×になる表記 */
+.bar.cross.bar_top {
+  transform: translateY(2px) rotate(30deg);/*2px30度傾く*/
+  transition: transform .3s;
+}
+.bar.cross.bar_mid{
+  opacity: 0;
+  transition: opacity .3s;
+}
+.bar.cross.bar_bottom{
+  transform: translateY(-2px) rotate(-30deg);/*-2px-30度傾く*/
+  transition: transform .3s;
+}
+  
+  /* ハンバーガーメニューが開いたとき */
+  body.noscroll{
+    overflow: hidden;/*ハンバーガーメニューが開いたときに全体がスクロールされない指定*/
+  }
+  .header-nav.open{
+    transform: translateX(0);
+    opacity: 1;
+    transition: transform .3s,opacity .3s;
+  }
+  .burger-musk{ /*背景が暗くなる指定*/
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:rgba(0,0,0,.5);
+    z-index: 1;
+  }
+  
+  .burger-btn.black .bar{ /*スクロール時バーガーボタンが黒くなる指定*/
+    background-color: #333;
+    transition: background-color .3s;
+  }
+  .burger-btn.black .menu{
+    color: #333;
+    transition: color .3s;
+  }
+
+  /*----------------------*/
+/*----------fv----------*/
+/*----------------------*/
+
+.fv {
+  height: 60vh;
+  min-height: 450px;/*どっからきた？画面を縦に縮めても崩れない指定*/
+}
+.fv::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #222;
+  width: 50%;
+  height: 60vh;
+  z-index: -1;
+}
+.kv-wrapper {
+  height: 86.5%;/*親要素の横幅を基準としたパーセンテージ*/
+  width: 76.4%;/*親要素の横幅を基準としたパーセンテージ*/
+  background-image: url(../images/heading-img_about.jpg);
+  background-size: cover;
+  background-position: center 0;
+  position: relative;
+}
+.page-title {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(50%,-50%);
+  color: #fff;
+  font-size: 7.2rem;
+  font-weight: bold;
+}
+.page-title span {
+  font-size: 2rem;
+  display: block;
+}
+
+/* ----------------------- */
+/* section_vision
+/* ----------------------- */
+.section-wrapper:first-of-type {
+  padding-top: 120px;
+}
+.vision-wrapper {
+  padding-left: 15.7vw;/*どういった計算？*/
+}
+.vision {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.vision-text {
+  font-weight: bold;
+}
+
+/* ----------------------- */
+/* section_message
+/* ----------------------- */
+.ceo-img-wrapper {
+  width: 36.4%;/*親要素の横幅を基準としたパーセンテージ*/
+  position: absolute;
+  top: 0;
+  left: 30px;
+}
+.message-content {
+  width: 840px;/*どっからきた？*/
+  max-width: 70%;/*どういった計算？*/
+  margin-left: auto;/*右に寄せる指定*/
+  padding: 120px 0 60px;
+}
+.massage-content-inner {
+  max-width: 400px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+.relative {
+  position: relative;
+  padding-top: 150px;
+}
+.message-text {
+  font-weight: bold;
+}
+
+/* ----------------------- */
+/* company
+/* ----------------------- */
+.section-wrapper:last-of-type {
+  padding-bottom: 120px;
+}
+.company-info-list {
+  border-top: 1px solid #fff;
+  margin-bottom: 40px;
+}
+.company-info-list>div {/*該当箇所の中のdiv*/
+  display: flex;
+  padding: 20px 0;
+  max-width: 800px;
+  margin-left: auto;
+  border-bottom: 1px solid #ddd;
+}
+.company-info-title {
+  font-weight: bold;
+  flex-basis: 142px;/*該当箇所の箱の横幅の指定。これを指定することで、横のデータが左揃えになる！*/
+}
+.maps-outer{
+  position:relative;
+  width:100%;
+  height:0;
+  padding-top:32.7%;/*横幅に対しての%　360px/1100px iframeのレスポンシブはこれが便利！*/
+}
+.maps-outer iframe{/*画面幅を変えても縦横の比率変わらずレスポンシブされる*/
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+
+/* ----------------------- */
+/* footer
+/* ----------------------- */
+.footer {
+  background-color: #525252;
+  text-align: center;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 50px;
+}
+
+@media screen and (max-width: 768px){
+  /* ----------------------- */
+  /* header_tb
+  /* ----------------------- */
+  .site-title{
+    width: 180px;
+    top: 21px;
+  }
+  .burger-btn{
+    top: 28px;
+  }
+  .header-nav{
+    width: 67.7vw;
+  }
+  
+  /* ----------------------- */
+  /* fv_tb
+  /* ----------------------- */
+  .page-title{
+    font-size: 5.2rem;
+    transform: translate(30%,-50%);
+  }
+  
+  /* ----------------------- */
+  /* vision_tb
+  /* ----------------------- */
+  .section-wrapper:first-of-type{
+    padding-top: 80px;
+  }
+  
+  /* ----------------------- */
+  /* section_message_tb
+  /* ----------------------- */
+  .section-wrapper:last-of-type{
+    padding-bottom: 80px;
+  }
+  .content-wrapper.relative{
+    padding-top: 120px;
+  }
+  .ceo-img-wrapper{
+    width: 100%;
+    max-width: 320px;
+  }
+  
+  }
+  
+  @media screen and (max-width: 480px){
+    /* ----------------------- */
+    /* fv_tb
+    /* ----------------------- */
+
+    .fv::after {
+      height: 67vh;
+    }
+
+    /* ----------------------- */
+    /* section_vision_sp
+    /* ----------------------- */
+    .vision-wrapper{
+      padding-left: 0;
+    }
+  
+    /* ----------------------- */
+    /* section_message_sp
+    /* ----------------------- */
+    .message-content{
+      width: 100%;
+      max-width: 100%;
+    }
+    .ceo-img-wrapper{
+      max-width: 90%;
+      left: 0;
+    }
+    .ceo-img-wrapper img{
+     height: 226px;
+     object-fit: cover;
+    }
+    
+    /* ----------------------- */
+    /* section_company_sp
+    /* ----------------------- */
+  
+    .maps-outer{
+      padding-top:140%;
+    }
+  
+  
+  }
